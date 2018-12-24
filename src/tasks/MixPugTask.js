@@ -9,13 +9,12 @@ const path = require('path');
 const pug  = require('pug');
 const fs   = require('fs');
 
-const blade = require('../core');
-
 class MixPugTask extends Task {
     /**
      * Run the pug compiler.
      */
     run() {
+        require('../core')
 
         let {src, output, options, files} = this.data;
 
